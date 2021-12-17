@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BMI_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Home" customClass="ViewController" customModule="BMI_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -142,6 +142,7 @@
                             <constraint firstItem="0tu-kq-SmA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ztF-Jn-Nx3"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="l6Q-k9-RND"/>
                     <connections>
                         <outlet property="ageTF" destination="NPV-Lc-8Bo" id="LSr-f3-l5f"/>
                         <outlet property="genderTF" destination="hcP-80-k1s" id="drO-V0-w3d"/>
