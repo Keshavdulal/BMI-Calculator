@@ -3,11 +3,20 @@
 //  BMI Calculator
 //
 //  Created by Keshav Dulal on 16/12/2021.
+//  Student ID 301209947
 //
 
 import UIKit
 
+// This is will pass data from this ViewController -> S ummaryViewController
+protocol SummaryDelegate{
+    func didPassData(date:String, bmi:Double, category:String)
+}
+
 class ViewController: UIViewController {
+    
+    var summaryDelegate: SummaryDelegate!
+    
     
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var ageTF: UITextField!
@@ -28,7 +37,7 @@ class ViewController: UIViewController {
     var isMetric:Bool = true
     var BMI:Double = 0
     var category:String = ""
-    var todaysDate = Date().description
+    var todaysDate:String = Date().description
     
     //
     var name:String = ""
@@ -56,10 +65,7 @@ class ViewController: UIViewController {
         
         if(weight == "" && height == ""){
             showAlert()
-        }else{
-            
-            
-            
+        } else {
             let weigthFloat = Double(weight)
             let heightFloat = Double(height)
             //
@@ -96,7 +102,6 @@ class ViewController: UIViewController {
             
             
             resultsLabel.text = "BMI:" + String(BMI.reduceScale(to: 2)) + "\nCategory:" + category
-
             resultsLabel.numberOfLines = 0 // prevents ...
         }
     }
@@ -115,6 +120,11 @@ class ViewController: UIViewController {
         weightLabel.text = "Weight (lb)"
         heightLabel.text = "Height (in)"
     }
+    
+    @IBAction func storeInSummary(_ sender: Any) {
+//        summaryDelegate.didPassData(date: todaysDate, bmi: BMI, category: category)
+    }
+    
     
     func resetDisplayState(){
         isMetric = true;
@@ -146,4 +156,5 @@ extension Double {
         return originalDecimal
     }
 }
+
 

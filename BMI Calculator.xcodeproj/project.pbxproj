@@ -17,6 +17,7 @@
 		2C0E4DDF276B129900391CD1 /* BMI_CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0E4DDE276B129900391CD1 /* BMI_CalculatorUITests.swift */; };
 		2C0E4DE1276B129900391CD1 /* BMI_CalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0E4DE0276B129900391CD1 /* BMI_CalculatorUITestsLaunchTests.swift */; };
 		2CD2CEC7276CD6FC009562FE /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD2CEC6276CD6FC009562FE /* SummaryViewController.swift */; };
+		2CD2CEC9276CF864009562FE /* BMIRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD2CEC8276CF864009562FE /* BMIRecord.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		2C0E4DDE276B129900391CD1 /* BMI_CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMI_CalculatorUITests.swift; sourceTree = "<group>"; };
 		2C0E4DE0276B129900391CD1 /* BMI_CalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMI_CalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2CD2CEC6276CD6FC009562FE /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		2CD2CEC8276CF864009562FE /* BMIRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIRecord.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				2C0E4DC8276B129900391CD1 /* LaunchScreen.storyboard */,
 				2C0E4DCB276B129900391CD1 /* Info.plist */,
 				2CD2CEC6276CD6FC009562FE /* SummaryViewController.swift */,
+				2CD2CEC8276CF864009562FE /* BMIRecord.swift */,
 			);
 			path = "BMI Calculator";
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				2C0E4DBE276B129700391CD1 /* AppDelegate.swift in Sources */,
 				2C0E4DC0276B129700391CD1 /* SceneDelegate.swift in Sources */,
 				2CD2CEC7276CD6FC009562FE /* SummaryViewController.swift in Sources */,
+				2CD2CEC9276CF864009562FE /* BMIRecord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

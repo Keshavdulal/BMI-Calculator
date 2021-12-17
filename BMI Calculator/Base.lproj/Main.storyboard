@@ -109,8 +109,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3G7-hv-vyA">
                                                 <rect key="frame" x="0.0" y="31" width="374" height="31"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Store in Summary"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Done"/>
                                                 <connections>
+                                                    <action selector="storeInSummary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RBU-eS-F84"/>
                                                     <segue destination="J6D-kZ-gOw" kind="popoverPresentation" popoverAnchorView="3G7-hv-vyA" id="2Ff-oa-shT">
                                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                                     </segue>
@@ -167,7 +168,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eeh-O6-9jL">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="20.5"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLW-9F-7qX" userLabel="Date">
                                         <rect key="frame" x="0.0" y="0.0" width="138" height="20.5"/>
@@ -189,12 +190,10 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="chV-Bm-2Bu">
-                                <rect key="frame" x="0.0" y="296" width="414" height="230"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="chV-Bm-2Bu">
+                                <rect key="frame" x="0.0" y="49" width="414" height="795"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="230" id="Jtb-m5-1iE"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myTableCellReuseIdentifier" id="N4N-NA-MSj">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="34.5"/>
@@ -238,18 +237,18 @@
                         <viewLayoutGuide key="safeArea" id="VgG-jD-1i5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="VgG-jD-1i5" firstAttribute="trailing" secondItem="chV-Bm-2Bu" secondAttribute="trailing" id="8VB-2v-Fgk"/>
-                            <constraint firstItem="eeh-O6-9jL" firstAttribute="top" secondItem="VgG-jD-1i5" secondAttribute="top" id="Coi-P3-DEU"/>
+                            <constraint firstItem="eeh-O6-9jL" firstAttribute="top" secondItem="VgG-jD-1i5" secondAttribute="top" constant="20" id="Coi-P3-DEU"/>
                             <constraint firstItem="eeh-O6-9jL" firstAttribute="leading" secondItem="VgG-jD-1i5" secondAttribute="leading" id="VYN-ZT-w0s"/>
                             <constraint firstItem="VgG-jD-1i5" firstAttribute="trailing" secondItem="eeh-O6-9jL" secondAttribute="trailing" id="ekS-gC-YNu"/>
-                            <constraint firstItem="VgG-jD-1i5" firstAttribute="bottom" secondItem="chV-Bm-2Bu" secondAttribute="bottom" constant="282" id="lAO-lH-KRc"/>
-                            <constraint firstItem="chV-Bm-2Bu" firstAttribute="leading" secondItem="VgG-jD-1i5" secondAttribute="leading" id="tSq-UR-BuQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="summaryTV" destination="chV-Bm-2Bu" id="mk1-L0-amb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W9c-oJ-zrt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1055" y="96"/>
+            <point key="canvasLocation" x="1053.6231884057972" y="95.758928571428569"/>
         </scene>
     </scenes>
     <resources>
