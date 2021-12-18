@@ -15,7 +15,9 @@ class SummaryViewController: UIViewController {
     
     // store your records here
     var records = [
-        BMIRecord(date:Date().description,bmi:22,category:"Normal")
+        BMIRecord(date:Date().description, bmi:20, category:"Normal"),
+        BMIRecord(date:Date().description, bmi:21, category:"Normal"),
+        BMIRecord(date:Date().description, bmi:22, category:"Normal")
     ]
     
     var _date:String = ""
@@ -55,16 +57,28 @@ extension SummaryViewController: UITableViewDelegate{
 
  
 extension SummaryViewController: UITableViewDataSource{
+    // section -> rows -> content
+    
+    
     // return number of items to be shown in the UITableView
     func tableView(_ summaryTV: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return records.count
-        return 10
+        return records.count
+//        return 100
     }
     
+    // map source data array here to each cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = summaryTV.dequeueReusableCell(withIdentifier: "myTableCellReuseIdentifier", for: indexPath)
         
-//        cell.textLabel?.text = String(_bmi)
+        // asking TV to create us a cell using the prototype cell
+        let cell = summaryTV.dequeueReusableCell(withIdentifier: "myTableCellReuseIdentifier", for: indexPath) as! ActionsOnTableViewCell
+        
+
+        let record = records[indexPath.row]
+        
+        // simple way to set values on cell
+//        cell.textLabel?.text = String(record.bmi)
+        
+        cell.setValues(date: record.date, bmi: record.bmi, category: record.category)
         
         return cell
     }
